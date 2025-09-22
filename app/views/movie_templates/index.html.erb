@@ -1,0 +1,59 @@
+<h1>
+  List of all movies
+</h1>
+
+<hr>
+
+<article>
+  <header>
+    <h2>
+      Add a new movie
+    </h2>
+  </header>
+
+  <form action="/insert_movie" method="post">
+    <div>
+      <label for="title_box">
+        Title
+      </label>
+
+      <input type="text" id="title_box" name="query_title">
+    </div>
+
+    <div>
+      <label for="description_box">
+        Description
+      </label>
+
+      <input type="text" id="description_box" name="query_description">
+    </div>
+
+    <div>
+      <label for="released_box">
+        Released
+      </label>
+
+      <input type="text" id="released_box" name="query_released">
+    </div>
+
+    <button type="submit">
+      Create movie
+    </button>
+  </form>
+</article>
+
+<hr>
+
+<article>
+  <ul>
+    <% @list_of_movies.each do |a_movie| %>
+      <li>
+        <a href="/movies/<%= a_movie.id %>">
+          Movie #<%= a_movie.id %>
+        </a>
+      </li>
+    <% end %>
+  </ul>
+</article>
+
+<hr>
