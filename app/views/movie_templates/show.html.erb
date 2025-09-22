@@ -81,16 +81,15 @@
       <input type="text" id="description_box" name="query_description" value="<%= @the_movie.description %>">
     </div>
 
-    <div>
-      <label for="released_box">
-        Released
-      </label>
+  
+<div>
+  <input type="checkbox" id="released_box" name="query_released" value="1">
 
-      <input type="text" id="released_box" name="query_released" value="<%= @the_movie.released %>">
-    </div>
+  <label for="released_box">Released</label>
+</div>
 
     <button type="submit">
-      Update movie
+      Update Movie
     </button>
   </form>
 </article>

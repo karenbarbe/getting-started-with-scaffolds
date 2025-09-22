@@ -1,49 +1,16 @@
-<h1>
-  List of all movies
-</h1>
+<div>
+  <div>
+    <h1>
+      List of all movies
+    </h1>
 
-<hr>
+    <a href="/movies/new">Add a new movie
 
-<article>
-  <header>
-    <h2>
-      Add a new movie
-    </h2>
-  </header>
+    </a>
 
-  <form action="/movies" method="post">
-    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-    <div>
-      <label for="title_box">
-        Title
-      </label>
+  </div>
+</div>
 
-      <input type="text" id="title_box" name="query_title">
-    </div>
-
-    <div>
-      <label for="description_box">
-        Description
-      </label>
-
-      <input type="text" id="description_box" name="query_description">
-    </div>
-
-    <div>
-      <label for="released_box">
-        Released
-      </label>
-
-      <input type="text" id="released_box" name="query_released">
-    </div>
-
-    <button type="submit">
-      Create movie
-    </button>
-  </form>
-</article>
-
-<hr>
 
 <article>
   <ul>
@@ -56,5 +23,3 @@
     <% end %>
   </ul>
 </article>
-
-<hr>
